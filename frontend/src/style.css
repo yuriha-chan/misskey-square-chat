@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@600&display=swap');
+.menu div {
+	padding: 0.2em;
+}
+.menu div:hover {
+	background-color: #eee;
+}
+
+.chat-app {
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+}
+
+.topbar {
+  position: fixed;
+  height: 32px;
+  top: 0;
+  width: 100%;
+}
+
+.roomName {
+  background: #ddccaacc;
+  font-size: 75%;
+  padding: 2px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chat-form {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  width: 100%;
+}
+
+#message-head{
+  height: 64px;
+}
+#spacing {
+  height: 64px;
+}
+
+.chat-messages {
+	width: 100%;
+	background-color: #a7aabb;
+}
+
+.message-container {
+	padding: 0 5px 0;
+}
+
+.message-container > .user {
+	font-size: 80%;
+	color: #610;
+	font-weight: bold;
+	text-align: left;
+}
+
+.message-container > .user > .username {
+	font-size: 70%;
+	color: #974;
+}
+
+.message-item.me > .message-container > .user {
+  display: none;
+}
+
+.message-item {
+	display: flex;
+	padding: 10px;
+}
+.message-item.me {
+  flex-direction: row-reverse;
+}
+.message-item.other {
+  flex-direction: row;
+}
+
+.me .message {
+  margin-top: 5px;
+	background-color: #aea;
+}
+
+.other .message {
+	background-color: #eee;
+}
+
+.message {
+	background-color: #ccc;
+	border-radius: 0.5em;
+	padding: 0.2em 1em;
+	width: max-content;
+	max-width: 70vw;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	text-align: left;
+}
+
+.time {
+  color: #c77b46;
+  font-size: 70%;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+input {
+	flex: 1;
+	height: 1.4em;
+	font-size: 1.2em;
+  background: #fff;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color: #222;
+	background-color: #a7aabb;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.chat-messages img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+img:hover {
+	filter: drop-shadow(0 0 2em #673ab8aa);
+}
+
+section {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+}

@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./keys/jwt.private.pem:/app/jwt.private.pem
+      - ./keys/jwt.public.pem:/app/jwt.public.pem
+      - ./logs/log:/app/log
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+  nginx:
+    image: nginx
+    volumes:
+      - ./config/nginx.conf
